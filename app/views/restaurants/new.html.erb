@@ -13,5 +13,8 @@
   <%= f.label :description %><br>
   <%= f.text_area :description %><br>
 
+  <h4> select a category </h4>
+  <%= f.select :category_id, options_from_collection_for_select(Category.find(:all), "id", "name") %>
+
   <%= f.submit %>
 <% end %>

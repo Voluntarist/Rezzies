@@ -1,0 +1,7 @@
+<h1> here are your categories </h1>
+
+<% @categories.each do |f| %>
+  <%= f.name %>
+  <%= f.restaurant_ids %>
+  <%= link_to 'Delete', f, method: :delete, data: { confirm: 'Are you sure?' } %>
+<% end %>
