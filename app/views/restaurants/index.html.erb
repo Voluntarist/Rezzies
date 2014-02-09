@@ -1,0 +1,15 @@
+<h1> Here are the list of all our fine Fast-Foods.</h1>
+<h1> live mas you foodies!</h1>
+<table>
+<% @restaurants.each do |r| %>
+    <tr>
+      <td><%= r.name %></td>
+      <td><%= r.address %></td>
+      <td><%= r.capacity %></td>
+      <td><%= r.description %></td>
+      <td><%= link_to 'Edit', edit_restaurant_path(r) %></td>
+      <td><%= link_to 'Delete', r, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  </br>
+<% end %>
+</table>
