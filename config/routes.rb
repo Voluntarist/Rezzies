@@ -1,12 +1,13 @@
 Rezzies::Application.routes.draw do
 
 
-  resources :restaurants
+
   resources :categories
   resources :users, :only => [:new, :create]
 
-
-
+    resources :restaurants do
+      resources :reservations
+    end
 
 
 

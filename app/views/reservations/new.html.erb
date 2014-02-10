@@ -1,0 +1,24 @@
+<h1> Time to Book a Reservation </h1>
+
+
+<%= form_for([@restaurant, @reservation]) do |f| %>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <br>
+  <%= f.label :party_size %>
+  <%= f.number_field :party_size %>
+
+  <h4> Which Restaurant Would You like to reserve? </h4>
+  <%= f.select :restaurant_id, options_from_collection_for_select(Restaurant.find(:all), "id", "name") %>
+
+
+
+
+
+  <%= f.submit %>
+
+<% end %>
+
+
+<!-- list your eligible restaurants to book... how would you do this? -->
+

@@ -9,6 +9,7 @@
       <td><%= r.description %></td>
       <td><%= link_to 'Edit', edit_restaurant_path(r) %></td>
       <td><%= link_to 'Delete', r, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <td><%= link_to 'Book a Reservation', new_restaurant_reservation_path(r) %></td>
     </tr>
   </br>
 <% end %>
